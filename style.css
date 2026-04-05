@@ -15,6 +15,11 @@
     padding: 0;
 }
 
+html {
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-main);
@@ -59,6 +64,8 @@ body {
 
 .header {
     margin-bottom: 4rem;
+    scroll-snap-align: start;
+    scroll-margin-top: 2rem;
 }
 
 .uni-header {
@@ -124,6 +131,8 @@ body {
 
 .details {
     margin-bottom: 5rem;
+    scroll-snap-align: start;
+    scroll-margin-top: 2rem;
 }
 
 .intro {
@@ -198,6 +207,8 @@ body {
     margin-bottom: 4rem;
     position: relative;
     overflow: hidden;
+    scroll-snap-align: start;
+    scroll-margin-top: 2rem;
 }
 
 .rsvp::before {
