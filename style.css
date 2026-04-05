@@ -1,0 +1,303 @@
+:root {
+    /* Paleta corporativa elegante: Azul oscuro, negro y detalles dorados */
+    --bg-color: #0b0f19;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --accent: #d4af37; /* Dorado metálico elegante */
+    --accent-hover: #f1c40f;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(212, 175, 55, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Efecto sutil de iluminación de fondo */
+.glow-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, rgba(11, 15, 25, 1) 70%);
+    z-index: -1;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+/* Animación de entrada inicial */
+.fade-in {
+    animation: fadeIn 1.5s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    margin-bottom: 4rem;
+}
+
+.uni-header {
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.uni-logo {
+    width: 130px;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
+}
+
+.uni-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+}
+
+.title {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    background: linear-gradient(135deg, #ffffff 30%, #d4af37 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.degree {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--text-main);
+    letter-spacing: 2px;
+    margin-top: 0.5rem;
+}
+
+.divider {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    margin: 2.5rem auto;
+}
+
+.details {
+    margin-bottom: 5rem;
+}
+
+.intro {
+    font-size: 1.1rem;
+    margin-bottom: 3.5rem;
+    font-weight: 300;
+    color: #e5e7eb;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+}
+
+@media (min-width: 600px) {
+    .title {
+        font-size: 3.5rem;
+    }
+}
+
+/* Tarjetas con efecto Glassmorphism */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 2.5rem 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+}
+
+.card h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--accent);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.card p {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: #d1d5db;
+}
+
+.card strong {
+    color: #fff;
+    font-weight: 400;
+}
+
+/* Sección de RSVP */
+.rsvp {
+    background: linear-gradient(145deg, rgba(255,255,255,0.02) 0%, rgba(212, 175, 55, 0.04) 100%);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 3.5rem 2rem;
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.rsvp::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.rsvp h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.rsvp p {
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.rsvp-form input {
+    width: 100%;
+    padding: 1.2rem;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.rsvp-form input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+    padding: 1.2rem;
+    background: var(--accent);
+    color: #0b0f19;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1);
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.btn-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover .btn-icon {
+    transform: translateX(6px);
+}
+
+.footer {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   SISTEMAS INTRO THEME
+   ========================================= */
+.binary-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    background-color: #0b0f19;
+    opacity: 0.15; /* Subdued matrix rain */
+}

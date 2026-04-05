@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduación | Ing. en Sistemas de Información</title>
+
+    <!-- Open Graph para previsualización profesional en WhatsApp -->
+    <meta property="og:title" content="🎓 Graduación | Ingeniería en Sistemas de Información">
+    <meta property="og:description"
+        content="Tengo el honor de invitarte a la ceremonia de mi graduación profesional. Haz clic para ver los detalles y confirmar tu asistencia.">
+    <!-- Puedes reemplazar esta imagen con una tuya formal que se mostrará en WhatsApp -->
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=600&auto=format&fit=crop">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuentes elegantes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Matrix/Binary Background Canvas -->
+    <canvas id="binaryCanvas" class="binary-bg"></canvas>
+
+    <div class="glow-bg"></div>
+
+    <div class="container fade-in">
+        <header class="header">
+            <div class="uni-header">
+                <img src="logo.png" alt="Universidad Mariano Gálvez de Guatemala" class="uni-logo">
+                <h2 class="uni-name">Universidad Mariano Gálvez de Guatemala</h2>
+            </div>
+            <p class="subtitle">Con gran orgullo y satisfacción</p>
+            <!-- REEMPLAZAR NOMBRE AQUÍ -->
+            <h1 class="title">Cristofer Jamíl Miranda Navarro</h1>
+            <div class="degrees"
+                style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; align-items: center;">
+                <p class="degree"
+                    style="margin-top: 0; font-size: 1.6rem; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.8)); text-align: center;">
+                    Ingeniero en Sistemas de Información</p>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; opacity: 0.9;">
+                    <span style="height: 1px; width: 40px; background: var(--accent);"></span>
+                    <span style="color: var(--accent); font-family: 'Cinzel', serif; font-size: 1.1rem;">&amp;</span>
+                    <span style="height: 1px; width: 40px; background: var(--accent);"></span>
+                </div>
+                <p class="degree"
+                    style="margin-top: 0; font-size: 1.25rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 2.5px; filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.4));">
+                    Magíster en Seguridad Informática</p>
+            </div>
+            <div class="divider"></div>
+        </header>
+
+        <section class="details">
+            <p class="intro">Tengo el honor de invitarte a celebrar la culminación de este gran proyecto de vida.</p>
+
+            <div class="cards-container">
+                <div class="card hover-lift">
+                    <h3>Recepción</h3>
+                    <p><strong>Fecha:</strong> Sábado, 25 de Abril de 2026</p>
+                    <p><strong>Hora:</strong> 17:00 hrs</p>
+                    <p><strong>Lugar:</strong> Hotel y Restaurante Madelyn, 9na calle 4-06 Zona 1 San Marcos, San Marcos
+                        <br><a
+                            href="https://www.google.com/maps/search/?api=1&query=Hotel+y+Restaurante+Madelyn+San+Marcos"
+                            target="_blank"
+                            style="color: var(--primary); font-weight: 600; display: inline-block; margin-top: 5px;">📍
+                            Ver en Google Maps</a>
+                    </p>
+                    <p><strong>Vestimenta:</strong> Formal / Etiqueta</p>
+                </div>
+        </section>
+
+        <section class="rsvp">
+            <h2>Confirmación de Asistencia</h2>
+            <p>Por favor, Es muy importante que confirmes tu asistencia para considerarte en este día tan especial.</p>
+
+            <form id="rsvpForm" class="rsvp-form">
+                <input type="text" id="guestName" placeholder="Ingresa tu nombre" required autocomplete="off">
+                <button type="submit" class="btn-primary">
+                    <span class="btn-text">Confirmar vía WhatsApp</span>
+                    <span class="btn-icon">➔</span>
+                </button>
+            </form>
+        </section>
+
+        <section class="gift-suggestion"
+            style="margin-top: 2rem; margin-bottom: 2rem; text-align: center; font-size: 0.85rem; color: var(--text-muted); opacity: 0.7;">
+            <p><em>Si deseas tener un detalle adicional conmigo en este día tan especial, te agradecería infinitamente
+                    que fuera un regalo en efectivo.</em></p>
+        </section>
+
+        <footer class="footer">
+            <p>© 2026. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
