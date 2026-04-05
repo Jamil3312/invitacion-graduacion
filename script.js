@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (guestName) {
                 // TODO: Reemplaza este número con el tu número real incluyendo el código de área (ej: 502 para Guatemala)
                 const phoneNumber = '50247045968';
-                const message = `¡Hola Cristofer! Confirmo mi asistencia a tu recepción de graduación. Soy ${guestName}.`;
+                const message = `¡Hola Cristofer! Confirmo mi asistencia a tu recepción de graduación. Soy ${guestName}. 🎓🎉`;
                 const encodedMessage = encodeURIComponent(message);
                 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
