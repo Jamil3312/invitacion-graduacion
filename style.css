@@ -16,7 +16,7 @@
 }
 
 html {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
@@ -44,7 +44,7 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 4rem 1.5rem;
+    padding: 0 1.5rem;
     text-align: center;
 }
 
@@ -63,9 +63,12 @@ body {
 }
 
 .header {
-    margin-bottom: 4rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     scroll-snap-align: start;
-    scroll-margin-top: 2rem;
+    padding: 2rem 0;
 }
 
 .uni-header {
@@ -130,9 +133,12 @@ body {
 }
 
 .details {
-    margin-bottom: 5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     scroll-snap-align: start;
-    scroll-margin-top: 2rem;
+    padding: 2rem 0;
 }
 
 .intro {
@@ -199,16 +205,26 @@ body {
 }
 
 /* Sección de RSVP */
+.final-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    padding: 2rem 0;
+    width: 100%;
+}
+
 .rsvp {
     background: linear-gradient(145deg, rgba(255,255,255,0.02) 0%, rgba(212, 175, 55, 0.04) 100%);
     border: 1px solid var(--card-border);
     border-radius: 20px;
     padding: 3.5rem 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     position: relative;
     overflow: hidden;
-    scroll-snap-align: start;
-    scroll-margin-top: 2rem;
+    width: 100%;
 }
 
 .rsvp::before {
