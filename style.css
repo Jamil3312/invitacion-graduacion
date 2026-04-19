@@ -141,11 +141,39 @@ body {
     padding: 2rem 0;
 }
 
-.intro {
-    font-size: 1.1rem;
-    margin-bottom: 3.5rem;
+.verse-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: start;
+    padding: 2rem 0;
+}
+
+.verse {
+    font-size: 1.35rem;
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.verse small {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.parents-invitation {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
     font-weight: 300;
-    color: #e5e7eb;
+    line-height: 1.5;
 }
 
 .cards-container {
@@ -202,7 +230,7 @@ body {
 
 .card p {
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 1.15rem;
     color: var(--text-muted);
 }
 
@@ -251,8 +279,9 @@ body {
 
 .rsvp p {
     color: var(--text-muted);
+    font-size: 1.1rem;
     margin-bottom: 2.5rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .rsvp-form {
